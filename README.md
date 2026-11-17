@@ -20,7 +20,6 @@ A web platform for students of **Rajasthan College of Engineering for Women (RCE
 | Frontend   | React 18, TypeScript, Vite, React Router, TanStack Query      |
 | UI         | Tailwind CSS, Radix UI (shadcn/ui components), Framer Motion  |
 | Backend    | Node.js, Express, Zod                                         |
-| Database   | MongoDB with Mongoose models (see Current Status)             |
 | Testing    | Vitest                                                        |
 | Deployment | Render (`render.yaml`) and Netlify (`netlify.toml`)           |
 
@@ -34,8 +33,7 @@ RCEW-Project-Bank/
 │   └── hooks/          # use-auth and other hooks
 ├── server/             # Express API
 │   ├── routes/         # auth.ts, projects.ts
-│   ├── models/         # Mongoose models: User, Project
-│   └── config/         # database connection
+│   └── models/         # Data models (not used yet)
 ├── shared/             # TypeScript types shared by client and server
 └── public/             # Static assets
 ```
@@ -109,12 +107,11 @@ npm start
 This is a work in progress.
 
 - The API currently stores users and projects **in memory**, so data resets when the server restarts.
-- Mongoose models for `User` and `Project` are written but not yet connected to the routes.
 - Authentication is a placeholder: passwords are not hashed and a real JWT is not issued yet.
 
 ## Roadmap
 
-- [ ] Connect the Express routes to MongoDB through the Mongoose models
+- [ ] Add persistent storage for users and projects
 - [ ] Hash passwords with bcrypt and issue real JWTs
 - [ ] File uploads for project documentation and source code
 - [ ] Faculty and admin roles
@@ -123,4 +120,4 @@ This is a work in progress.
 ## Author
 
 **Tamanna Yadav**
-B.Tech CSE, Rajasthan College of Engineering for Women# RCEW-project-bank
+B.Tech CSE, Rajasthan College of Engineering for Women
