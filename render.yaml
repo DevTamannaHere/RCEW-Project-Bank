@@ -10,5 +10,4 @@ services:
         value: 18
       - key: PORT
         value: 3000
-      - key: MONGO_URI
-        value: mongodb+srv://tamannaya0104:<tamannayadav101>@cluster0123.dkg39gi.mongodb.net/
+  
